@@ -1,24 +1,26 @@
 import mysql from 'mysql2/promise'
 import colors from 'colors'
 
+let db 
 
-async function connectDB() {
+export default async function connectDB() {
     try{
-        const connection = await mysql.createConnection({
+        db = await mysql.createConnection({
             host: "localhost",      
             user: "root",           
             password: "Givindu@17", 
             database: "ctb_db"
         })
         console.log("Connected to MySQL Database ...".bgCyan.white)
-        return connection
+        return db
     }
     catch (error) {
-        console.log("Error connecting to MySQL : ", error.message)
+        console.error("Error connecting to MySQL : ", error.message)
         process.exit(1)
     }
     
 }
 
-export default connectDB
+
+export {db}
 
