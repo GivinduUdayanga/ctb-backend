@@ -5,7 +5,7 @@ import colors from 'colors'
 import connectDB from './db.js'
 import {db} from './db.js'
 import awaitingSalesOfferingRouter from './routes/awaitingSalesOfferingRouter.js'
-
+import weeklySalesAverageRouter from './routes/weeklySalesAverageRouter.js'
 
 
 //configure dotenv
@@ -26,7 +26,7 @@ await connectDB()
 
 //Routes
 app.use('/api/awaitingSalesOffering', awaitingSalesOfferingRouter)
-
+app.use('/api/weeklySalesAverage', weeklySalesAverageRouter)
 
 //PORT
 const PORT = process.env.PORT || 5000
@@ -34,5 +34,3 @@ const PORT = process.env.PORT || 5000
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${process.env.PORT} ...`.bgMagenta.white)
 })
-
-
