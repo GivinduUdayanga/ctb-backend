@@ -4,9 +4,9 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 import connectDB from './db.js'
 import {db} from './db.js'
-import awaitingSalesOfferingRouter from './routes/awaitingSalesOfferingRouter.js'
 import weeklySalesAverageRouter from './routes/weeklySalesAverageRouter.js'
-
+import weeklySalesRouter from "./routes/weeklySalesRouter.js"
+import offeringTypesRouter from "./routes/offeringTypesRouter.js"
 
 //configure dotenv
 dotenv.config()
@@ -25,8 +25,12 @@ await connectDB()
 
 
 //Routes
-app.use('/api/awaitingSalesOffering', awaitingSalesOfferingRouter)
+
 app.use('/api/weeklySalesAverage', weeklySalesAverageRouter)
+app.use("/api/weeklySales", weeklySalesRouter)
+app.use("/api/offeringTypes", offeringTypesRouter)
+
+
 
 //PORT
 const PORT = process.env.PORT || 5000
