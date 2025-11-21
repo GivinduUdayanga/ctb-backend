@@ -7,6 +7,8 @@ import {db} from './db.js'
 import weeklySalesAverageRouter from './routes/weeklySalesAverageRouter.js'
 import weeklySalesRouter from "./routes/weeklySalesRouter.js"
 import offeringTypesRouter from "./routes/offeringTypesRouter.js"
+import weeklySoldQuantityRouter from './routes/weeklySoldQuantityRouter.js'
+
 
 //configure dotenv
 dotenv.config()
@@ -29,6 +31,7 @@ await connectDB()
 app.use('/api/weeklySalesAverage', weeklySalesAverageRouter)
 app.use("/api/weeklySales", weeklySalesRouter)
 app.use("/api/offeringTypes", offeringTypesRouter)
+app.use("/api/weeklySoldQuantity", weeklySoldQuantityRouter)
 
 
 
