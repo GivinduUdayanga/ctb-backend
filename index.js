@@ -8,6 +8,8 @@ import weeklySalesAverageRouter from './routes/weeklySalesAverageRouter.js'
 import weeklySalesRouter from "./routes/weeklySalesRouter.js"
 import offeringTypesRouter from "./routes/offeringTypesRouter.js"
 import weeklySoldQuantityRouter from './routes/weeklySoldQuantityRouter.js'
+import monthlySoldQuantityRouter from './routes/monthlySoldQuantityRouter.js'
+
 
 
 //configure dotenv
@@ -32,7 +34,7 @@ app.use('/api/weeklySalesAverage', weeklySalesAverageRouter)
 app.use("/api/weeklySales", weeklySalesRouter)
 app.use("/api/offeringTypes", offeringTypesRouter)
 app.use("/api/weeklySoldQuantity", weeklySoldQuantityRouter)
-
+app.use("/api/monthlySoldQuantity", monthlySoldQuantityRouter)
 
 
 //PORT
