@@ -9,7 +9,7 @@ import weeklySalesRouter from "./routes/weeklySalesRouter.js"
 import offeringTypesRouter from "./routes/offeringTypesRouter.js"
 import weeklySoldQuantityRouter from './routes/weeklySoldQuantityRouter.js'
 import monthlySoldQuantityRouter from './routes/monthlySoldQuantityRouter.js'
-
+import monthlyProductionRouter from './routes/monthlyProductionRouter.js'
 
 
 //configure dotenv
@@ -35,7 +35,7 @@ app.use("/api/weeklySales", weeklySalesRouter)
 app.use("/api/offeringTypes", offeringTypesRouter)
 app.use("/api/weeklySoldQuantity", weeklySoldQuantityRouter)
 app.use("/api/monthlySoldQuantity", monthlySoldQuantityRouter)
-
+app.use("/api/monthlyProduction", monthlyProductionRouter)
 
 //PORT
 const PORT = process.env.PORT || 5000
