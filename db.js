@@ -9,7 +9,10 @@ export default async function connectDB() {
             host: "localhost",      
             user: "root",           
             password: "Givindu@17", 
-            database: "ctb_db"
+            database: "ctb_db",
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0
         })
         console.log("Connected to MySQL Database ...".bgCyan.white)
         return db
