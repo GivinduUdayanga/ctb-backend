@@ -11,7 +11,7 @@ import weeklySoldQuantityRouter from './routes/weeklySoldQuantityRouter.js'
 import monthlySoldQuantityRouter from './routes/monthlySoldQuantityRouter.js'
 import monthlyProductionRouter from './routes/monthlyProductionRouter.js'
 import exportCountrywiseRouter from './routes/exportCountrywiseRoutes.js'
-
+import subscribersRouter from "./routes/subscribersRouter.js";
 
 
 //configure dotenv
@@ -39,6 +39,7 @@ app.use("/api/weeklySoldQuantity", weeklySoldQuantityRouter)
 app.use("/api/monthlySoldQuantity", monthlySoldQuantityRouter)
 app.use("/api/monthlyProduction", monthlyProductionRouter)
 app.use("/api/exportCountrywise", exportCountrywiseRouter)
+app.use("/api", subscribersRouter)
 
 
 
